@@ -1,6 +1,7 @@
 from fastapi import FastAPI
-from . import schemas, models
-from .database import engine
+from blog import schemas
+from blog import models
+from blog.database import engine
 
 app = FastAPI()
 print("Creating tables...")

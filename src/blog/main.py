@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from blog import schemas
-from blog import models
-from blog.database import engine
+from . import schemas
+from . import models
+from .database import engine
 
 app = FastAPI()
 print("Creating tables...")

@@ -17,17 +17,17 @@ def index(limit=10, published: bool = True, sort: Optional[str] = None):
         return {'data': f'{limit} blogs from the db'}
 
 
-@app.get('src/blog/unpublished')
+@app.get('blog/unpublished')
 def unpublished():
     # fetch unpublished blogs
     return {'data': 'all unpublished blogs'}
 
-@app.get('src/blog/{id}')
+@app.get('blog/{id}')
 def show(id: int):
     # fetch blog with id = id
     return {'data': id}
 
-@app.get('src/blog/{id}/comments')
+@app.get('blog/{id}/comments')
 def comments(id, limit=10):
     # fetch comments of blog with id = id
     return {'data': {'1', '2'}}

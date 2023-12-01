@@ -8,7 +8,7 @@ app = FastAPI()
 def index():
     return {'data': 'blog list'}
 
-@app.get('/blog')
+@app.get('')
 def index(limit=10, published: bool = True, sort: Optional[str] = None):
     # only get 10 published blogs
     if published:
@@ -38,7 +38,7 @@ class Blog(BaseModel):
     body: str
     published: Optional[bool]
 
-@app.post('/blog')
+@app.post('')
 def create_blog(blog: Blog):
     # create blog
     return {'data': 'Blog is created with title {blog.title}'}
